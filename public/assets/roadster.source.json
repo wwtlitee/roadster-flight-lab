@@ -1,0 +1,60 @@
+{
+  "productVersion": "0.0.3",
+  "assetRevision": "user-reference-wedge-20261016",
+  "asset": "roadster.glb",
+  "title": "用户参考图银色楔形跑车",
+  "bytes": 1657748,
+  "sha256": "0f2e2790b080918a1cf18cd1105cc96ec1f688451fe8a39fb2dbf3ff1e4de4aa",
+  "sourceType": "local-image-to-3d",
+  "factory": {
+    "name": "造点啥",
+    "version": "0.9.0a",
+    "engine": "trellis",
+    "engineTitle": "TRELLIS.2 Q8 / Native CUDA",
+    "runner": "trellis.cpp v0.8.1",
+    "jobId": "f2d89c732d144924addcf05eb096890e",
+    "runId": "20261016-181657-9a8d62963e2b",
+    "generationSeconds": 149
+  },
+  "reference": {
+    "kind": "user-supplied-image",
+    "sha256": "c38c40000512dcaf5a3b1e5aff910bda1b1df003c25674ba5e2698a4139935dd",
+    "inputRgbaSha256": "309b2ec3c3236180119ab7bed020d9d1b07f18898e53ef191271f795c2e4cc26"
+  },
+  "originalModelSha256": "7040da00ec2d2406dc5814c3a5e6ca54d1067cb0462a8fbca62b80d9d25d9493",
+  "triangles": 142762,
+  "vertices": 102634,
+  "meshes": 1,
+  "materials": 1,
+  "textures": 1,
+  "maximumTextureDimension": 2048,
+  "forwardAxis": "+Z",
+  "upAxis": "+Y",
+  "modifications": "Rotated root +90 degrees about Y to map generated -X nose to game +Z; shape and triangle count retained. Geometry and texture compression details are in runtimeOptimization.",
+  "validation": {
+    "formatErrors": 0,
+    "formatWarnings": 0,
+    "visualReview": "Agent inspected front, rear, side and top renders; wedge nose, front corner lamps, black lower intake/side skirts, rear wing and thin rear light band present. Single-view hidden surfaces are inferred; user acceptance pending."
+  },
+  "runtimeAppearance": {
+    "version": "0.0.1",
+    "referenceSha256": "f0fa2f1acfa79dc59f6a14bc5c4f4bd7c648043dfd1bc0bd78788f3c1fd5c131",
+    "implementation": "src/car-materials.js",
+    "body": "silver-white",
+    "glazing": "dark windshield, side windows and rear glass with silver frames",
+    "lowerTrim": "black lower skirts and underbody",
+    "wheels": "four fitted graphite closed aero discs with dark rim and center hub",
+    "method": "Runtime material masks use normalized vehicle coordinates; wheel covers are separate thin meshes. Original GLB bytes remain unchanged.",
+    "userAcceptance": "pending"
+  },
+  "runtimeOptimization": {
+    "version": "0.0.2",
+    "geometry": "Meshopt with 16-bit positions, 12-bit normals, 14-bit UV; triangle count unchanged",
+    "texture": "2048 WebP quality 85",
+    "removed": "Unused metallic-roughness map replaced by runtime reference finish",
+    "beforeBytes": 15938216,
+    "sourceSha256": "392440b1f764bce40312735dd5545db830fcfdd91f9815582e721379cf658fad",
+    "sourceVertices": 102640,
+    "optimizedVertices": 102634
+  }
+}

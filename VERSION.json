@@ -1,0 +1,8 @@
+{
+  "product": "Roadster Flight Lab",
+  "version": "0.0.3",
+  "packageVersion": "0.0.3",
+  "owner": "Unclecow",
+  "issue": "GitHub开源发布与可复现本地打包",
+  "gameplayBaseline": "0.0.2"
+}

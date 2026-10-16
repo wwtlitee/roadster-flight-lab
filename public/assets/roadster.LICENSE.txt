@@ -1,0 +1,30 @@
+Roadster Flight Lab — user-reference silver wedge model — v0.0.3
+
+This game model was generated locally from the reference image supplied by
+the user in this project. It is not the earlier Tesla Roadster 2020 asset.
+
+Generator: build something / 造点啥 0.9.0a
+Engine: TRELLIS.2 Q8 / Native CUDA (trellis.cpp v0.8.1)
+Generation date: 2026-10-16
+Run ID: 20261016-181657-9a8d62963e2b
+Original reference SHA256:
+c38c40000512dcaf5a3b1e5aff910bda1b1df003c25674ba5e2698a4139935dd
+
+Modifications by Unclecow:
+Rotated the generated root +90 degrees about Y to align the nose with game +Z.
+The factory-generated shape and 142,762 triangles are retained; geometry is
+Meshopt-compressed with 16-bit positions, 12-bit normals and 14-bit UVs.
+The base color remains 2048 pixels and is encoded as WebP quality 85.
+The unused metal/roughness map replaced by the runtime finish is omitted.
+No additional polygon reduction was applied.
+
+The earlier metarex.4d / vecarz CC BY 4.0 asset is no longer used by this file.
+That license does not apply to this generated asset or the user-supplied image.
+No official Tesla affiliation, endorsement or official-model accuracy is claimed.
+Single-view reconstruction infers surfaces that are not visible in the reference.
+
+Unclecow's original contributions to this asset are offered under the MIT
+License in the repository root, to the extent Unclecow holds such rights.
+The source reference image and video are not included or licensed here.
+This grant does not cover third-party reference imagery, vehicle designs,
+trademarks, or other rights held by their respective owners.

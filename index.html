@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="theme-color" content="#030405"/>
+  <title>Roadster</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+  <link rel="preload" href="/assets/roadster.glb?v=0f2e2790b080918a" as="fetch" crossorigin="anonymous"/>
+</head>
+<body>
+<canvas id="world" aria-label="Roadster 三维驾驶场景"></canvas>
+<header class="topbar">
+  <div class="brand">ROADSTER</div>
+  <div class="top-actions"><span class="edition">v0.0.3</span><button id="sound-btn" class="icon-button" aria-label="开启声音">声音 关</button><button id="fullscreen-btn" class="icon-button" aria-label="切换全屏">⛶</button></div>
+</header>
+<div id="loading-screen" class="loading-screen" role="status">载入中…</div>
+<section id="hud" class="hud stage-ui" hidden aria-label="飞行仪表">
+<div class="broadcast-left"><div class="dial force-dial"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M15 83 A44 44 0 1 1 85 83"/></svg><span class="dial-label" id="force-label">DOWNFORCE</span><strong id="downforce">0</strong><small id="force-unit">KG</small></div><div class="orientation-wrap"><div class="orientation-disc"><svg id="orientation-car" viewBox="0 0 130 50" aria-label="车身侧面姿态"><path d="M5 30L15 23 38 18 58 8 87 10 104 22 119 24 125 33 120 37H9Z" fill="#b9c0c5" stroke="#e9edef"/><path d="M43 18L60 11 83 13 96 22 37 22Z" fill="#151b20"/><circle cx="29" cy="35" r="10" fill="#080a0c" stroke="#969da2" stroke-width="2"/><circle cx="102" cy="35" r="10" fill="#080a0c" stroke="#969da2" stroke-width="2"/></svg></div><div class="speed-line"><span id="speed">0</span> <small>KM/H</small></div></div></div>
+<div class="broadcast-right"><div class="dial"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M15 83 A44 44 0 1 1 85 83"/></svg><span class="dial-label">PITCH</span><strong id="pitch-value">0.0</strong><small>DEG</small></div><div class="dial"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M15 83 A44 44 0 1 1 85 83"/></svg><span class="dial-label">ALTITUDE</span><strong id="altitude">0.0</strong><small>FT</small></div></div>
+<div id="jet-panel" class="jet-panel" data-mode="drive">
+  <div id="jet-grid" class="jet-grid" aria-label="车辆按键位置"><canvas id="control-car" width="160" height="240" aria-label="车头朝上的 Roadster 俯视模型"></canvas></div>
+  <div class="game-toolbar" id="game-toolbar"><button id="pause-btn"><kbd>Esc</kbd>暂停</button><button id="restart-btn"><kbd>R</kbd>重来</button></div>
+</div>
+<div class="flight-detail"><span><i id="vertical-label">↓</i> <b id="vertical">0.0</b> m/s</span><span>倾角 <b id="tilt">0°</b> </span><span>气量 <b id="fuel">100</b>%</span><span>落区 <b id="distance">0 m</b></span><div class="fuel-track"><i id="fuel-fill"></i></div></div>
+<div class="live-mark"><b>ROADSTER</b><span>LIVE</span></div>
+</section>
+<section id="pause-screen" class="modal-backdrop" hidden>
+  <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="pause-title">
+    <h2 id="pause-title">暂停</h2>
+    <div class="mode-picker" role="group" aria-label="难度"><button data-difficulty="practice" aria-pressed="false">练习</button><button data-difficulty="normal" class="selected" aria-pressed="true">标准</button></div>
+    <button class="primary" id="resume-btn">继续</button>
+    <button class="secondary" id="pause-restart-btn">重来</button>
+  </div>
+</section>
+<section id="result-screen" class="modal-backdrop result-backdrop" hidden>
+  <div class="dialog result-dialog" role="dialog" aria-modal="true" aria-labelledby="result-title">
+    <h2 id="result-title">已着陆</h2>
+    <div class="result-score"><strong id="score">0</strong><span>/ 1000<br><small>着陆评分</small></span></div>
+    <div class="result-stats"><div><span>接地垂速</span><strong id="result-descent">—</strong></div><div><span>车身倾角</span><strong id="result-tilt">—</strong></div><div><span>剩余气量</span><strong id="result-fuel">—</strong></div></div>
+    <p class="best-score" id="best-score"></p>
+    <button class="primary" id="retry-btn">再来一次</button>
+  </div>
+</section>
+<div id="error-screen" class="error-screen" hidden><h2>载入失败</h2><p id="error-message"></p><button id="reload-btn" class="primary">重试</button></div>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

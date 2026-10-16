@@ -1,0 +1,5 @@
+/assets/index-*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/roadster.glb
+  Cache-Control: public, max-age=31536000, immutable
